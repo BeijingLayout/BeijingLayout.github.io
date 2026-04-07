@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Contest</title>
+    <style>
+        /* 全局样式 - 赛博朋克基底 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            /* 赛博霓虹渐变背景 */
+            background: linear-gradient(135deg, #0d0221, #2d1b69, #5a189a, #7b2cb9);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #ffffff;
+            /* 背景固定，营造科技感 */
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        /* 博客容器 - 霓虹发光边框 */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(13, 2, 33, 0.8);
+            border: 2px solid #00ffe7;
+            border-radius: 12px;
+            /* 多层霓虹发光效果 */
+            box-shadow: 0 0 10px #00ffe7,
+                        0 0 20px #00ffe7,
+                        0 0 30px #ff00a0,
+                        0 0 40px #ff00a0;
+            padding: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 标题 - 赛博霓虹发光特效 */
+        .blog-title {
+            font-size: 48px;
+            text-align: center;
+            color: #00ffe7;
+            text-shadow: 0 0 5px #00ffe7,
+                         0 0 10px #00ffe7,
+                         0 0 15px #ff00a0,
+                         0 0 20px #ff00a0;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* 正文段落样式 */
+        .blog-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f0e9ff;
+        }
+
+        .blog-content p {
+            margin-bottom: 25px;
+            /* 轻微文字发光，提升可读性 */
+            text-shadow: 0 0 2px rgba(0, 255, 231, 0.3);
+        }
+
+        /* 强调高亮 - 霓虹粉色 */
+        .highlight {
+            color: #ff00a0;
+            text-shadow: 0 0 5px #ff00a0;
+            font-weight: bold;
+        }
+
+        /* 赛博霓虹按钮样式 */
+        .cyber-button {
+            display: block;
+            margin: 40px auto 0;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            background: transparent;
+            color: #00ffe7;
+            border: 2px solid #00ffe7;
+            border-radius: 8px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #00ffe7;
+            box-shadow: 0 0 10px #00ffe7, 0 0 20px #ff00a0;
+            transition: all 0.3s ease;
+        }
+
+        /* 按钮悬浮效果 */
+        .cyber-button:hover {
+            color: #ff00a0;
+            border-color: #ff00a0;
+            box-shadow: 0 0 15px #ff00a0, 0 0 30px #00ffe7;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 32px;
+            }
+            .blog-container {
+                padding: 30px 20px;
+            }
+            .cyber-button {
+                padding: 12px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <h1 class="blog-title">Innovation Contest</h1>
+        <div class="blog-content">
+            <p>Imagine you are a college student planning an exchange program for your third year. One major challenge in this process is not only selecting your top-choice universities, but also navigating the numerous variables involved. These include your living budget, location preferences, language barriers, testing requirements, and course regulations.</p>
+            
+            <p>However, one of the most frustrating aspects of the exchange process is <span class="highlight">course selection</span>. Courses differ across universities in terms of class codes, prerequisites, content coverage, and even naming conventions. This makes it difficult to determine whether courses are truly equivalent.</p>
+            
+            <p>An additional complication is that even if you believe you have successfully matched courses, there is no guarantee that your home and host universities will approve them as equivalents. Formal approval from your faculty is required, and this process can take several weeks. As a result, you face both a lack of clear information on course compatibility and the risk of not receiving approval in time—potentially just days before your exchange begins.</p>
+        </div>
+
+        <!-- 赛博霓虹按钮：双击跳转到百度 -->
+        <button class="cyber-button" ondblclick="window.location.href='https://www.baidu.com'">
+            Double Click to Baidu
+        </button>
+    </div>
+
+    <script>
+        // 额外兼容确保双击跳转生效
+        document.querySelector('.cyber-button').addEventListener('dblclick', () => {
+            window.open('https://www.baidu.com', '_blank');
+        });
+    </script>
+</body>
+</html>
